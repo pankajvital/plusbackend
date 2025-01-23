@@ -19,6 +19,9 @@ const corsOptions = {
 
 app.use(cors());
 app.use(express.json());
+app.get('/',(req,res)=>{
+  res.send("api is running succesfuly")
+})
 
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
